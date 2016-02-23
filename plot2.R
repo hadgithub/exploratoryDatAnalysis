@@ -1,6 +1,7 @@
 plot2 <- function(dataFile){
                 library(dplyr)
                 library(ggplot2)
+                library(lattice)
                 cons <- read.csv(dataFile,sep=";",na.strings="?")
                 cons4DayComp <- complete.cases(cons)
                 conSiNas <- cons[cons4DayComp,][,]
